@@ -18,13 +18,14 @@ public class ListingPage {
     @FindBy(xpath = "(//a[normalize-space()='Listing'])[1]")
     public WebElement listLink;
 
+
     @FindBy(xpath = ("//div[@class='item-sorting clearfix']"))
     public WebElement listAramaSonucElementi;
 
     @FindBy(xpath = "//*[@class='js-cookie-consent-agree cookie-consent__agree']")
     public WebElement listSayfacookies;
 
-    @FindBy(xpath =" //input[@placeholder='Search for a location']")
+    @FindBy(xpath = " //input[@placeholder='Search for a location']")
     public WebElement searchlocationbox;
 
     @FindBy(xpath = "//*[@id='select2-city_id-container']")
@@ -36,22 +37,21 @@ public class ListingPage {
     @FindBy(xpath = "//*[@id='select2-select-type-container']")
     public WebElement dropdownType;
 
-    @FindBy(xpath ="//input[@placeholder='Min Area']")
+    @FindBy(xpath = "//input[@placeholder='Min Area']")
     public WebElement dropdownMin;
 
-    @FindBy(xpath ="//input[@placeholder='Max Area']")
+    @FindBy(xpath = "//input[@placeholder='Max Area']")
     public WebElement dropdownMax;
 
     @FindBy(xpath = "//*[@id=\"features\"]/ul")
     public WebElement checkboxList;
 
 
-
     @FindBy(xpath = "//button[@class='btn btn btn-theme-light-2 rounded full-width mt-3']")
     public WebElement findNewHomeButton;
 
 
-    @FindBy(xpath = "//div[@class='left-column pull-left']")
+    @FindBy(xpath = "//div[@class='item-sorting clearfix']")
     public WebElement aramaSonucSayisi;
 
 
@@ -68,10 +68,8 @@ public class ListingPage {
     @FindBy(xpath = "(//div[@class='listing-content'])[1]")
     public WebElement ilanDetay4;
 
-    @FindBy(xpath = "(//a[@href='https://qa.hauseheaven.com/properties/315-delaware-avenue'])[1]")
+    @FindBy(xpath = "(//a[@href='https://qa.hauseheaven.com/properties/315-delaware-avenue'])[7]")
     public WebElement ilkIlanDetay;
-
-
 
 
     @FindBy(xpath = "//h4[@class='property_block_title']")
@@ -79,7 +77,6 @@ public class ListingPage {
     @FindBy(xpath = "//div[@class='slick-slide slick-current slick-active']")
     public List<WebElement> propertiesIlanlar;
 
-//#################################US06
 
     @FindBy(xpath = "//div[@class='col-lg-6 col-md-12']")
     public List<WebElement> propertiesDetay;
@@ -99,10 +96,10 @@ public class ListingPage {
     @FindBy(xpath = "//div[@id='alert-container']")
     public WebElement alertElement;
 
-   @FindBy(xpath = "//*[@placeholder='Name *']")
+    @FindBy(xpath = "//*[@placeholder='Name *']")
     public WebElement nameInput;
 
-   @FindBy(xpath = "//*[@placeholder='Phone *']")
+    @FindBy(xpath = "//*[@placeholder='Phone *']")
     public WebElement phoneInput;
 
     @FindBy(xpath = "//*[@placeholder='Email']")
@@ -115,13 +112,36 @@ public class ListingPage {
     public WebElement messageInput;
 
     @FindBy(xpath = "//*[@class='btn btn-black btn-md rounded full-width']")
+
     public WebElement submitButton;
 
-    @FindBy(xpath =  "//div[@id='alert-container']")
+    @FindBy(xpath = "//div[@id='alert-container']")
     public WebElement messageAlert;
 
+    @FindBy(xpath = "//div[@class='property-listing property-1']")
+    public WebElement foundOfResault;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/section/div/div[2]/div[2]/div[2]/div[15]/div/div[4]/div[2]/a")
+    public WebElement houseForsale01;
+
+    @FindBy(xpath = "(//a[@class='prt-view'])[7]")
+    public WebElement houseclick;
+
+    @FindBy(xpath = "(//a[@class='prt-view'])[6]")
+    public WebElement scrollTime;
+
+    @FindBy(xpath = "//*[@class='form-control ht-80']")
+    public WebElement messageTextBox;
 
 
+    @FindBy(xpath = "//a[@class='more-btn']")
+    public WebElement viewButton;
+
+    @FindBy(xpath = "//*[@class='btn btn-theme-light-2 rounded']")
+    public WebElement submitReviev;
+
+    @FindBy(xpath = "//label[text()='Cleanliness']")
+    public WebElement pageDown;
 
 
 }

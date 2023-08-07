@@ -18,7 +18,7 @@ public class TestBaseReport {
     protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
 
     // Test işlemine başlamadan hemen önce (test methodundan önce değil, tüm test işleminden önce)
-    @BeforeTest(alwaysRun = true) // alwaysRun : her zaman çalıştır.
+    @BeforeTest(alwaysRun = true) // alwaysRun : her zaman çalışır.
     public void setUpTest() {
         extentReports = new ExtentReports(); // Raporlamayi baslatir
         //rapor oluştuktan sonra raporunuz nereye eklensin istiyorsanız buraya yazıyorsunuz.
@@ -38,20 +38,20 @@ public class TestBaseReport {
 
 
     // Her test methodundan sonra eğer testte hata varsa, ekran görüntüsü alıp rapora ekliyor
-    @AfterMethod(alwaysRun = true)
-    public void tearDownMethod(ITestResult result) throws IOException {
+   //erMethod(alwaysRun = true)
+   //ic void tearDownMethod(ITestResult result) throws IOException {
 
-        if (result.getStatus() == ITestResult.FAILURE) { // eğer testin sonucu başarısızsa
-            String screenshotLocation = ReusableMethods.getScreenshot(result.getName());
-            extentTest.fail(result.getName());
-            extentTest.addScreenCaptureFromPath(screenshotLocation);
-            extentTest.fail(result.getThrowable());
-        } else if (result.getStatus() == ITestResult.SKIP) { // eğer test çalıştırılmadan geçilmezse
-            extentTest.skip("Test Case is skipped: " + result.getName()); // Ignore olanlar
-        }
-        Driver.closeDriver();
+   //if (result.getStatus() == ITestResult.FAILURE) { // eğer testin sonucu başarısızsa
+   //    String screenshotLocation = ReusableMethods.getScreenshot(result.getName());
+   //    extentTest.fail(result.getName());
+   //    extentTest.addScreenCaptureFromPath(screenshotLocation);
+   //    extentTest.fail(result.getThrowable());
+   //} else if (result.getStatus() == ITestResult.SKIP) { // eğer test çalıştırılmadan geçilmezse
+   //    extentTest.skip("Test Case is skipped: " + result.getName()); // Ignore olanlar
+   //}}
+   //Driver.closeDriver();
 
-    }
+
 
 
     // Raporlandırmayı sonlandırmak icin
